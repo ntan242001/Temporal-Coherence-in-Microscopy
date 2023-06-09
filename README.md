@@ -3,10 +3,10 @@ Programs used in the process of publication of "Temporal coherence envelope func
 
 ## Description
 This project contains programmes that simulate and analyse images formed by Low Energy Electron Microscopy (LEEM). The principle and calculations are based on the following articles: 
-* [Xuan Tan Nguyen, Michael S. Altman, Ultramicroscopy](https://doi.org/10.1016/j.ultramic.2023.113751)
-* [K.M.Yu et al 2019 Ultramicroscopy 200, 160-168](https://doi.org/10.1016/j.ultramic.2019.01.015)
-* [A B Pang et al 2009 J. Phys.: Condens. Matter 21 314006](https://doi.org/10.1088/0953-8984/21/31/314006)
-* [S.M.Schramm et al 2012 Ultramicroscopy 115, 88-108](https://doi.org/10.1016/j.ultramic.2011.11.005)
+* [X. T. Nguyen, M. S. Altman, Ultramicroscopy](https://doi.org/10.1016/j.ultramic.2023.113751)
+* [K. M. Yu et al 2019 Ultramicroscopy 200, 160-168](https://doi.org/10.1016/j.ultramic.2019.01.015)
+* [A. B. Pang et al 2009 J. Phys.: Condens. Matter 21 314006](https://doi.org/10.1088/0953-8984/21/31/314006)
+* [S. M. Schramm et al 2012 Ultramicroscopy 115, 88-108](https://doi.org/10.1016/j.ultramic.2011.11.005)
 
 A poster summarising this research can be found in the [link](https://drive.google.com/file/d/1OXvwEWZkI2jBYA_pVRFQ-NgTUow1s4UK/view?usp=sharing).
 
