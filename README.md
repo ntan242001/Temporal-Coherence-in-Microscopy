@@ -1,5 +1,5 @@
 # Temporal-Coherence-in-Electron-Microscopy
-Programs used in the process of publication of "Temporal coherence envelope function of field emission in electron microscopy"
+Programmes used in the process of publication of "Temporal Coherence Envelope Function of Field Emission in Electron Microscopy".
 
 ## Description
 This project contains programmes that simulate and analyse images formed by Low Energy Electron Microscopy (LEEM). The principle and calculations are based on the following articles: 
