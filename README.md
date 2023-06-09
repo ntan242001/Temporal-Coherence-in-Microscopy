@@ -17,7 +17,7 @@ The programmes are written in Python 3 with common libraries such as numpy, matp
 
 ## LEEM Fourier Optics Simulation
 ### Resolution as a function of defocus
-THe file "R(dz).py" contains the main programme to simulate the intensity profile of a given object function, at different defocus values specified by the user. Both standard (NAC) and aberration-correct (AC) LEEM parameters specified in [Nguyen, Altman](https://doi.org/10.1016/j.ultramic.2023.113751) are provided. The aperture angle and other parameters are also specified and can be altered by the user.
+The file "R(dz).py" contains the main programme to simulate the intensity profile of a given object function, at different defocus values specified by the user. Both standard (NAC) and aberration-correct (AC) LEEM parameters specified in [Nguyen, Altman](https://doi.org/10.1016/j.ultramic.2023.113751) are provided. The aperture angle and other parameters are also specified and can be altered by the user.
 
 ## Contributing
 For contribution request, please email the author at xtnguyenaa@connect.ust.hk.
