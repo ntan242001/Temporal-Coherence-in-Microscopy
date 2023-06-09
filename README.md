@@ -10,6 +10,8 @@ This project contains programmes that simulate and analyse images formed by Low 
 
 A poster summarising this research can be found in the [link](https://drive.google.com/file/d/1OXvwEWZkI2jBYA_pVRFQ-NgTUow1s4UK/view?usp=sharing).
 
+![image](https://github.com/ntan242001/Temporal-Coherence-in-Microscopy/assets/62791920/60108931-e0b0-404b-921b-54c8263c2b7a)
+
 ## Installation
 The programmes are written in Python 3 with common libraries such as numpy, matplotlib. 
 
