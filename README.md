@@ -22,8 +22,8 @@ The file "R(dz).py" contains the main programme to simulate the intensity profil
 ## Contributing
 For contribution request, please email the author at xtnguyenaa@connect.ust.hk.
 
-## Authors and acknowledgement
-This is part of the UROP project on LEEM Fourier Optics at HKUST of the author under the supervision of professor [M.S. Altman](https://physics.ust.hk/eng/people_detail.php?pplcat=1&id=1). 
+## Acknowledgement
+Support from the Hong Kong Research Grants Council (16304718) is gratefully acknowledged.
 
 ## Project status
 Active
