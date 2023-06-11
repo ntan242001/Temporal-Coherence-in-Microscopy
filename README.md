@@ -1,4 +1,4 @@
-# Temporal-Coherence-in-Electron-Microscopy
+# Temporal Coherence in Electron Microscopy
 Programmes used in the process of publication of "[X. T. Nguyen, M. S. Altman, Temporal Coherence Envelope Function of Field Emission in Electron Microscopy, Ultramicroscopy 2023](https://doi.org/10.1016/j.ultramic.2023.113751))".
 
 ## Description
