@@ -1,5 +1,5 @@
 # Temporal Coherence in Electron Microscopy
-Programmes used in the process of publication of "[X. T. Nguyen, M. S. Altman, Temporal Coherence Envelope Function of Field Emission in Electron Microscopy, Ultramicroscopy 2023](https://doi.org/10.1016/j.ultramic.2023.113751))".
+Programmes used in the process of publication of "[X. T. Nguyen, M. S. Altman, Temporal Coherence Envelope Function of Field Emission in Electron Microscopy, Ultramicroscopy 2023](https://doi.org/10.1016/j.ultramic.2023.113751)".
 
 ## Description
 This project contains programmes that simulate and analyse images formed by Low Energy Electron Microscopy (LEEM). The principle and calculations are based on the article [Nguyen, Altman, Ultramicroscopy](https://doi.org/10.1016/j.ultramic.2023.113751), which considers the effect on image formation of partial temporal coherence from field emission sources used in most state-of-the-art electron microscopies.
