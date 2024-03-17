@@ -24,7 +24,7 @@ The file "R(dz).py" contains the main programme to simulate the intensity profil
 The codes used to plot the figures in the paper [Nguyen, Altman](https://doi.org/10.1016/j.ultramic.2023.113751) are available in the branch [Figures](https://github.com/ntan242001/Temporal-Coherence-in-Microscopy/tree/Figures).
 
 ## Contributing
-For contribution request, please email the author at xtnguyenaa@connect.ust.hk.
+For contribution request, please email the author at ntan242001@gmail.com.
 
 ## Acknowledgement
 Support from the Hong Kong Research Grants Council (16304718) is gratefully acknowledged.
