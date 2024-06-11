@@ -18,7 +18,7 @@ The programmes are written in Python 3 with common libraries such as numpy, matp
 
 ## LEEM Fourier Optics Simulation
 ### Resolution as a function of defocus
-The file "Image_Simulation.py" contains the main programme to simulate the intensity profile of a given object function, at different defocus values specified by the user. Both standard (NAC) and aberration-correct (AC) LEEM parameters specified in [Nguyen, Altman](https://doi.org/10.1016/j.ultramic.2023.113751) are provided. The aperture angle and other parameters are also specified and can be altered by the user.
+The file "ImageProfile.py" contains the main programme to simulate the intensity profile of a given object function, at different defocus values specified by the user. Both standard (NAC) and aberration-correct (AC) LEEM parameters specified in [Nguyen, Altman](https://doi.org/10.1016/j.ultramic.2023.113751) are provided. The aperture angle and other parameters are also specified and can be altered by the user.
 
 ### Figures
 The codes used to plot the figures in the paper [Nguyen, Altman](https://doi.org/10.1016/j.ultramic.2023.113751) are available in the branch [Figures](https://github.com/ntan242001/Temporal-Coherence-in-Microscopy/tree/Figures).
