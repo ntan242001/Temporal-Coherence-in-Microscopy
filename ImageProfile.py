@@ -110,7 +110,7 @@ def choose_LEEM_type(LEEM_type_str, aberration_corrected_bool = False):
 
 
 object_size = 400               # simulating object size in nm
-simulating_steps = 1 + 2**15  # total simulating steps
+simulating_steps = 1 + 2**12  # total simulating steps
 # An array of points in the x space
 x_array = (np.linspace(-object_size/2, object_size/2, simulating_steps) + object_size/simulating_steps)*1e-9
 
@@ -183,18 +183,18 @@ t_0 = time.time()
 object_function_reversed = object_function[::-1] 
     
 # Creating an array of different delta z
-delta_z_series = np.linspace(-1.8*(C_3*lamda)**(1/2), 2.2*(C_3*lamda)**(1/2), 64)
+delta_z_series = np.linspace(-1.8*(C_3*lamda)**(1/2), 2.2*(C_3*lamda)**(1/2), 10)
 # delta_z_series = np.linspace(-1.8*(C_5*lamda**2)**(1/3), 1.8*(C_5*lamda**2)**(1/3), 64)
 # del1 = 0.5e-6
 # delta_z_series = del1*np.arange(-2,7)
 # delta_z_series = 1e-6*np.linspace(-3, 3, 1+2*2)
+
 # Initialising the series of function I(x) at different values of q_ap
 matrixI1 = np.zeros((len(x_array), len(delta_z_series)), dtype=complex)
 matrixIFN = np.zeros((len(x_array), len(delta_z_series)), dtype=complex)
 
-
 # A function to calculate the image for single Gaussian distribution
-def Image1Gauss(delta_z, delta_z_index):    
+def get_image_Gaussian(delta_z, delta_z_index):    
     matrixI = np.zeros((len(x_array), len(delta_z_series)), dtype=complex)
     # The Fourier Transform of the Object Wave Function
     F_object_function = np.fft.fft(object_function_reversed, simulating_steps) * (1 / simulating_steps)
@@ -245,20 +245,10 @@ def Image1Gauss(delta_z, delta_z_index):
         
 
     matrixI[:, delta_z_index] = matrixI[:, delta_z_index] + np.trace(AR) * np.ones_like(x_array)
-
     return matrixI
 
-with Parallel(n_jobs=-1, verbose=50, max_nbytes="50M") as parallel:
-    parallelResult = parallel(delayed(Image1Gauss)(delta_z, delta_z_index) for delta_z_index, delta_z in enumerate(delta_z_series))
-
-for mat in parallelResult:
-    matrixI1 = matrixI1 + mat
-
-matrixI1 = np.abs(matrixI1)
-
-
 # A function to calculate the image for triple Gaussian distribution 
-def ImageFN(delta_z, delta_z_index):
+def get_image_field_emission(delta_z, delta_z_index):
     matrixI = np.zeros((len(x_array), len(delta_z_series)), dtype=complex)
     # The Fourier Transform of the Object Wave Function
     F_object_function = np.fft.fft(object_function_reversed, simulating_steps) * (1 / simulating_steps)
@@ -335,13 +325,23 @@ def ImageFN(delta_z, delta_z_index):
 
     return matrixI
 
+# Running simulation for Gaussian spread
 with Parallel(n_jobs=-1, verbose=50, max_nbytes="50M") as parallel:
-    parallelResult = parallel(delayed(ImageFN)(delta_z, delta_z_index) for delta_z_index, delta_z in enumerate(delta_z_series))
+    parallelResult = parallel(delayed(get_image_field_emission)(delta_z, delta_z_index) for delta_z_index, delta_z in enumerate(delta_z_series))
 
 for mat in parallelResult:
     matrixIFN = matrixIFN + mat
 
 matrixIFN = np.abs(matrixIFN)
+
+# Running simulation for field emission spread
+with Parallel(n_jobs=-1, verbose=50, max_nbytes="50M") as parallel:
+    parallelResult = parallel(delayed(get_image_Gaussian)(delta_z, delta_z_index) for delta_z_index, delta_z in enumerate(delta_z_series))
+
+for mat in parallelResult:
+    matrixI1 = matrixI1 + mat
+
+matrixI1 = np.abs(matrixI1)
 
 print('Simulation finished.')
 t_1 = time.time()
